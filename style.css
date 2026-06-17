@@ -1,0 +1,111 @@
+/* ░▒▓ Waybar — Lavender Noir ▓▒░
+   same vibe as Hyprland: pastel purple + soft pink, gentle neon glow */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Rubik", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces,
+#window,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    background: linear-gradient(135deg, rgba(40, 30, 60, 0.85), rgba(60, 40, 80, 0.75));
+    border: 1px solid rgba(201, 167, 255, 0.35);
+    border-radius: 16px;
+    padding: 0 14px;
+    margin: 6px 4px;
+    color: #e7d9ff;
+    box-shadow:
+        0 0 14px rgba(183, 148, 246, 0.35),
+        0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+#workspaces {
+    padding: 0 6px;
+}
+
+#workspaces button {
+    color: #b9a3d9;
+    padding: 0 8px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: rgba(245, 184, 208, 0.25);
+    box-shadow: 0 0 10px rgba(245, 184, 208, 0.5);
+}
+
+#workspaces button:hover {
+    background: rgba(201, 167, 255, 0.2);
+    box-shadow: 0 0 8px rgba(201, 167, 255, 0.4);
+}
+
+#window {
+    color: #d8c7f0;
+    font-style: italic;
+}
+
+#clock {
+    color: #f5d8ec;
+    font-weight: 600;
+    box-shadow:
+        0 0 16px rgba(245, 184, 208, 0.4),
+        0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+#pulseaudio {
+    color: #c9a7ff;
+}
+
+#network {
+    color: #a8e6e6;
+}
+
+#battery {
+    color: #f5b8d0;
+}
+
+#battery.warning {
+    color: #ffd2a8;
+}
+
+#battery.critical {
+    color: #ff9eb3;
+    animation: pulseWarn 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseWarn {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 158, 179, 0.4); }
+    50% { box-shadow: 0 0 18px rgba(255, 158, 179, 0.7); }
+}
+
+#tray {
+    padding: 0 10px;
+}
+
+#tray > .passive {
+    opacity: 0.6;
+}
+
+#tray > .needs-attention {
+    background: rgba(245, 184, 208, 0.3);
+}
+
+tooltip {
+    background: rgba(30, 24, 48, 0.95);
+    border: 1px solid rgba(201, 167, 255, 0.4);
+    border-radius: 12px;
+    color: #e7d9ff;
+}
