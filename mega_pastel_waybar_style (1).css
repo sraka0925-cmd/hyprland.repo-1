@@ -1,0 +1,93 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(16, 12, 44, 0.78);
+  color: #f3f1ff;
+  border-bottom: 2px solid rgba(64, 41, 255, 0.62);
+}
+
+#workspaces,
+#window,
+#clock,
+#temperature,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+  background: rgba(36, 28, 98, 0.76);
+  border: 1px solid rgba(64, 41, 255, 0.5);
+  border-radius: 14px;
+  margin: 4px 0;
+  padding: 0 12px;
+}
+
+#workspaces {
+  padding: 0 6px;
+}
+
+#workspaces button {
+  color: #f3f1ff;
+  background: transparent;
+  border-radius: 10px;
+  margin: 4px 2px;
+  padding: 0 9px;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  background: rgba(64, 41, 255, 0.95);
+}
+
+#workspaces button:hover {
+  color: #ffffff;
+  background: rgba(113, 96, 255, 0.86);
+}
+
+#clock {
+  color: #ffffff;
+  background: rgba(64, 41, 255, 0.78);
+  border-color: rgba(174, 166, 255, 0.5);
+}
+
+#temperature {
+  color: #e9e6ff;
+  background: rgba(64, 41, 255, 0.72);
+  border-color: rgba(184, 178, 255, 0.5);
+}
+
+#temperature.critical {
+  color: #ffffff;
+  background: rgba(255, 70, 114, 0.88);
+  border-color: rgba(255, 164, 187, 0.72);
+}
+
+#pulseaudio {
+  color: #d9d4ff;
+}
+
+#backlight {
+  color: #eeeaff;
+  background: rgba(49, 36, 135, 0.78);
+  border-color: rgba(113, 96, 255, 0.52);
+}
+
+#network {
+  color: #c9e8ff;
+}
+
+#battery {
+  color: #c8ffe0;
+}
+
+#battery.warning,
+#battery.critical {
+  color: #ffffff;
+  background: rgba(64, 41, 255, 0.95);
+}
